@@ -1,0 +1,13 @@
+﻿.textlabel{
+    font-size:20px;
+    width:250px;
+    display:inline-block;
+}
+.resultlabel{
+    font-size:20px;
+
+    background-color:aqua;
+}
+.mainContent{
+    margin:auto;
+}
