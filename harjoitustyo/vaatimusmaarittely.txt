@@ -1,0 +1,26 @@
+Harjoitustyön aihe: Ruokapäiväkirja
+Tekijä: Mikko Pakkanen / H8699
+
+Mihin tarkoitukseen/käyttöön sovellus tulee:
+
+Sovelluksen käyttäjä voi lisätä palveluun ruokareseptejä sekä kuvia tekemistään aterioista. Käyttäjät voivat rekisteröityä palveluun tekemällä itselleen käyttäjätunnukset ja kirjautumalla niillä sisään. Tämän jälkeen käyttäjä voi lisätä reseptin tekstinä ja liittää mahdollisen kuvan. Tiedot tallennetaan MySQL-tietokantaan.
+
+Lista toiminnoista (käyttäjän näkökulmasta) jota aiotaan toteuttaa:
+- Käyttäjän rekisteröinti
+- Käyttäjän autentikointi
+- Käyttäjätasot (admin/user?)
+- Käyttäjän henkilökohtaisten tietojen muokkaaminen
+- Reseptien lisäys
+- Reseptien poisto
+- Reseptien muokkaus
+- Kuvien lisääminen reseptiin
+- Käyttäjän lisäämien reseptien listaus
+- Listaus kaikista lisätyistä resepteistä
+
+Alustava suunnitelma käytettävistä teknologioista:
+- Tietokanta: MySQL
+- Ulkoasu: HTML/CSS/JS
+- Sovellus: ASP.NET C#
+
+Arvio työhön kuluvasta ajasta:
+- n. 25-45h
