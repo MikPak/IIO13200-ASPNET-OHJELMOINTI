@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 3 - Kalenteri", "Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 4 - Asiakastiedot SQL-Serverilta", "Tehtava 4 - Asiakastiedot SQL-Serverilta\Tehtava 4 - Asiakastiedot SQL-Serverilta.csproj", "{8C1A73BB-73FB-4FC6-BE81-733C1CBB46FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 9 - Junatiedot", "Tehtava 9 - Junatiedot\Tehtava 9 - Junatiedot.csproj", "{24AA544C-8EB7-4B35-8C4E-DBDAC691CE24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{8C1A73BB-73FB-4FC6-BE81-733C1CBB46FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C1A73BB-73FB-4FC6-BE81-733C1CBB46FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C1A73BB-73FB-4FC6-BE81-733C1CBB46FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24AA544C-8EB7-4B35-8C4E-DBDAC691CE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24AA544C-8EB7-4B35-8C4E-DBDAC691CE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24AA544C-8EB7-4B35-8C4E-DBDAC691CE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24AA544C-8EB7-4B35-8C4E-DBDAC691CE24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

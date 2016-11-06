@@ -1,0 +1,31 @@
+﻿<Window x:Class="Tehtava_9___Junatiedot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava_9___Junatiedot"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="891">
+    <Grid>
+        <ComboBox 
+            x:Name="cbCity"
+            Loaded="cbCity_Loaded" 
+            HorizontalAlignment="Left" 
+            Height="25" 
+            Margin="10,10,0,0" 
+            VerticalAlignment="Top" 
+            Width="192" 
+            SelectionChanged="cbCity_SelectionChanged"/>
+        <Button x:Name="btnGetTrains" Content="Hae lähtevät junat" HorizontalAlignment="Left" Height="25" Margin="219,10,0,0" VerticalAlignment="Top" Width="190" Click="btnGetTrains_Click"/>
+        <Label x:Name="lblStatus" Content="" HorizontalAlignment="Left" Height="25" Margin="414,10,0,0" VerticalAlignment="Top" Width="252"/>
+        <Grid x:Name="gridJunat" HorizontalAlignment="Left" Height="250" Margin="10,60,0,0" VerticalAlignment="Top" Width="863" Visibility="Visible">
+            <DataGrid
+                x:Name="datagridJunat"
+	            HorizontalAlignment="Left"
+	            Margin="10,10,0,0"
+	            VerticalAlignment="Top"
+                Visibility="Hidden"
+	            Loaded="DataGrid_Loaded"/>
+        </Grid>
+    </Grid>
+</Window>
