@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Tehtava1.aspx.cs" Inherits="Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="main.aspx.cs" Inherits="Main" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Tehtava1</title>
+    <title>Tehtava 1 - Ikkunan tarjouslaskuri</title>
     <link href="CSS/style.css" rel="stylesheet" />
 </head>
 <body>

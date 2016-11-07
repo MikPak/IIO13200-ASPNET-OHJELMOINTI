@@ -24,27 +24,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Saitti", "Saitti\", "{3E07E
 		SlnRelativePath = "Saitti\"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Tehtava1(1)", "Tehtava1\", "{E4697B83-E3F2-42F4-9DBA-DD4B09EDC70B}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_5987"
-		Debug.AspNetCompiler.PhysicalPath = "Tehtava1\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5987\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_5987"
-		Release.AspNetCompiler.PhysicalPath = "Tehtava1\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5987\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "5987"
-		SlnRelativePath = "Tehtava1\"
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 2 - Lotto", "Tehtava 2 - Lotto\Tehtava 2 - Lotto.csproj", "{11DAB296-E45A-478F-8AA1-E13AF4F51AD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 3 - Kalenteri", "Tehtava 3 - Kalenteri\Tehtava 3 - Kalenteri.csproj", "{BE7B9653-4B14-4222-BB2E-AFD235A99303}"
@@ -52,6 +31,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 4 - Asiakastiedot SQL-Serverilta", "Tehtava 4 - Asiakastiedot SQL-Serverilta\Tehtava 4 - Asiakastiedot SQL-Serverilta.csproj", "{8C1A73BB-73FB-4FC6-BE81-733C1CBB46FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 9 - Junatiedot", "Tehtava 9 - Junatiedot\Tehtava 9 - Junatiedot.csproj", "{24AA544C-8EB7-4B35-8C4E-DBDAC691CE24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 1 - Ikkunan tarjouslaskuri", "Tehtava 1 - Ikkunan tarjouslaskuri\Tehtava 1 - Ikkunan tarjouslaskuri.csproj", "{E307065E-D3E4-4F2C-A4D5-AE4B3C579A89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,10 +44,6 @@ Global
 		{3E07E2B3-CB80-4885-B897-D2149243510F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E07E2B3-CB80-4885-B897-D2149243510F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E07E2B3-CB80-4885-B897-D2149243510F}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{E4697B83-E3F2-42F4-9DBA-DD4B09EDC70B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4697B83-E3F2-42F4-9DBA-DD4B09EDC70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4697B83-E3F2-42F4-9DBA-DD4B09EDC70B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4697B83-E3F2-42F4-9DBA-DD4B09EDC70B}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{11DAB296-E45A-478F-8AA1-E13AF4F51AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11DAB296-E45A-478F-8AA1-E13AF4F51AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11DAB296-E45A-478F-8AA1-E13AF4F51AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -83,6 +60,10 @@ Global
 		{24AA544C-8EB7-4B35-8C4E-DBDAC691CE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24AA544C-8EB7-4B35-8C4E-DBDAC691CE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24AA544C-8EB7-4B35-8C4E-DBDAC691CE24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E307065E-D3E4-4F2C-A4D5-AE4B3C579A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E307065E-D3E4-4F2C-A4D5-AE4B3C579A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E307065E-D3E4-4F2C-A4D5-AE4B3C579A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E307065E-D3E4-4F2C-A4D5-AE4B3C579A89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
