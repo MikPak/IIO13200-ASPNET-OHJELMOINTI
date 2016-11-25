@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 9 - Junatiedot", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 1 - Ikkunan tarjouslaskuri", "Tehtava 1 - Ikkunan tarjouslaskuri\Tehtava 1 - Ikkunan tarjouslaskuri.csproj", "{E307065E-D3E4-4F2C-A4D5-AE4B3C579A89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 6 - LevykauppaX", "Tehtava 6 - LevykauppaX\Tehtava 6 - LevykauppaX.csproj", "{60220C56-3D34-42FD-BA93-DDE4181219AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{E307065E-D3E4-4F2C-A4D5-AE4B3C579A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E307065E-D3E4-4F2C-A4D5-AE4B3C579A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E307065E-D3E4-4F2C-A4D5-AE4B3C579A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60220C56-3D34-42FD-BA93-DDE4181219AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60220C56-3D34-42FD-BA93-DDE4181219AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60220C56-3D34-42FD-BA93-DDE4181219AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60220C56-3D34-42FD-BA93-DDE4181219AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
