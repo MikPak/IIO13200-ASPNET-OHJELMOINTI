@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="Tehtava_7___FinnKino.masterpage" CompilationMode="Always" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>FinnKino</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <div id="logo_holder" runat="server">
+                <img alt="" src="Images/logo.jpg" />
+                <hr />
+            </div>
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <div id="MainContentDiv" runat="server"></div>
+        </asp:ContentPlaceHolder>
+
+         <asp:ContentPlaceHolder ID="LeftMenu" runat="server">
+            <div id="LeftMenuDiv" runat="server" >
+                <asp:ListBox ID="TheatersListBox" 
+                    runat="server" 
+                    OnSelectedIndexChanged="TheatersListBox_SelectedIndexChanged"
+                    AutoPostBack="true"
+                    Height="300">
+                </asp:ListBox>
+            </div>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
