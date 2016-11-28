@@ -8,7 +8,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Xml;
 
-namespace Tehtava_7___FinnKino
+namespace Tehtava_8___FinnKino
 {
     public partial class masterpage : System.Web.UI.MasterPage
     {

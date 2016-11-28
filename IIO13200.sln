@@ -36,7 +36,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 1 - Ikkunan tarjous
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 6 - LevykauppaX", "Tehtava 6 - LevykauppaX\Tehtava 6 - LevykauppaX.csproj", "{60220C56-3D34-42FD-BA93-DDE4181219AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 7 - FinnKino", "Tehtava 7 - FinnKino\Tehtava 7 - FinnKino.csproj", "{6331B07C-E88C-40F8-8623-6A8351254242}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 8 - FinnKino", "Tehtava 8 - FinnKino\Tehtava 8 - FinnKino.csproj", "{6331B07C-E88C-40F8-8623-6A8351254242}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

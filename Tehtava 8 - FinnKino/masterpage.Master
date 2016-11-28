@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="Tehtava_7___FinnKino.masterpage" CompilationMode="Always" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="Tehtava_8___FinnKino.masterpage" CompilationMode="Always" %>
 
 <!DOCTYPE html>
 
