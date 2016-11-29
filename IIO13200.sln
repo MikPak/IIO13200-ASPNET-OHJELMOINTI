@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 6 - LevykauppaX", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 8 - FinnKino", "Tehtava 8 - FinnKino\Tehtava 8 - FinnKino.csproj", "{6331B07C-E88C-40F8-8623-6A8351254242}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 7 - Puolijaksopalaute", "Tehtava 7 - Puolijaksopalaute\Tehtava 7 - Puolijaksopalaute.csproj", "{B7C2AF10-4721-406C-B06D-0B5791EFF2C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,10 @@ Global
 		{6331B07C-E88C-40F8-8623-6A8351254242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6331B07C-E88C-40F8-8623-6A8351254242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6331B07C-E88C-40F8-8623-6A8351254242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C2AF10-4721-406C-B06D-0B5791EFF2C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C2AF10-4721-406C-B06D-0B5791EFF2C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C2AF10-4721-406C-B06D-0B5791EFF2C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C2AF10-4721-406C-B06D-0B5791EFF2C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
