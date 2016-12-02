@@ -1,0 +1,129 @@
+﻿@{
+    // title - The title of the page which appears in the browser window title. Aim for the title to be less than 70
+    //         characters. The site name appears at the end for better SEO.
+    ViewBag.Title = "Tervetuloa";
+    // Description - Used by search engines. Aim for more than 160 characters.
+    ViewBag.Description = "";
+    // Author - (Optional) Used by search engines. The author of the page.
+    ViewBag.Author = "Mikko Pakkanen";
+    // Referrer - (Optional) Controls what is sent in the HTTP referrer header when a client navigates from your page
+    //            to an external site for increased user privacy and security. See ReferrerMode for more information.
+    ViewBag.ReferrerMode = ReferrerMode.OriginWhenCrossOrigin;
+
+    // Add Twitter Card and Open Graph social meta tags so we can customize what happens when our page is shared
+    // on these social networks. Note that other social networks like Google+, Pintrest and others also use these.
+    // There are dozens of different Twitter Card or Open Graph object types we could add, a different one is added
+    // on each page as an example.
+    // These helpers make it very easy to add the meta tags. For best performance, see what tags are generated and
+    // hand code them yourself instead of using these helpers.
+    ViewBag.TwitterCard = new SummaryLargeImageTwitterCard("@RehanSaeedUK");
+    ViewBag.OpenGraph = new OpenGraphWebsite(
+        ViewBag.Title,
+        new OpenGraphImage(Url.AbsoluteContent("~/content/icons/open-graph-1200x630.png")) { Height = 630, Type = ContentType.Png, Width = 1200 })
+    {
+        Determiner = OpenGraphDeterminer.Blank,
+        SiteName = Application.Name
+    };
+}
+
+<header class="jumbotron">
+    <h1 style="">Ruokapäiväkirja</h1>
+    <p class="lead" style="">Palvelu ruokareseptien tallentamiseen sekä ruokapäiväkirjan pitämiseen.</p>
+    <p><a href="https://github.com/ASP-NET-MVC-Boilerplate/Templates" class="btn btn-primary btn-lg">Katso lisää »</a></p>
+</header>
+
+<div class="row main">
+    <div class="col-sm-6">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title">Rekisteröidy</h1>
+                <hr />
+            </div>
+        </div>
+        <div class="main-register main-center">
+            <form class="form-horizontal" method="post" action="#">
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Nimi</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Syötä nimesi" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Sähköposti</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Syötä sähköpostisi" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Käyttäjätunnus</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Syötä käyttäjätunnus" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Salasana</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Syötä salasana" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Salasanan vahvistus</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Syötä salasana" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <button type="button" class="btn btn-primary btn-lg btn-block login-button">Rekisteröidy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title">Kirjaudu sisään</h1>
+                <hr />
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <form class="form-horizontal" method="post" action="#">
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Käyttäjätunnus</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Syötä käyttäjätunnus" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Salasana</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Syötä salasana" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <button type="button" class="btn btn-primary btn-lg btn-block login-button">Kirjaudu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

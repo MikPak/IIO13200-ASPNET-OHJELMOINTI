@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 7 - Puolijaksopalau
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava 5 - Asiakastiedot EntityFrameworkilla", "Tehtava 5 - Asiakastiedot EntityFrameworkilla\Tehtava 5 - Asiakastiedot EntityFrameworkilla.csproj", "{BCE3301F-F99E-4D1E-89E0-EEBD8B86482E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitustyo - Ruokapaivakirja", "harjoitustyo\Harjoitustyo - Ruokapaivakirja\Harjoitustyo - Ruokapaivakirja.csproj", "{C82134A7-ED02-4F19-984B-F420DD7DF54A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,10 @@ Global
 		{BCE3301F-F99E-4D1E-89E0-EEBD8B86482E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCE3301F-F99E-4D1E-89E0-EEBD8B86482E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCE3301F-F99E-4D1E-89E0-EEBD8B86482E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82134A7-ED02-4F19-984B-F420DD7DF54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82134A7-ED02-4F19-984B-F420DD7DF54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82134A7-ED02-4F19-984B-F420DD7DF54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82134A7-ED02-4F19-984B-F420DD7DF54A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
