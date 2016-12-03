@@ -47,7 +47,17 @@
         [Route("", Name = HomeControllerRoute.GetIndex)]
         public ActionResult Index()
         {
-            return this.View(HomeControllerAction.Index);
+            if (Session["UserID"] != null)
+            {
+                return RedirectToAction("Index", "Account");
+            }
+            else
+            {
+                if(TempData["registeredMessage"] != null) {
+                    ViewBag.Message = TempData["registeredMessage"].ToString();
+                }
+                return this.View(HomeControllerAction.Index);
+            }
         }
 
         [Route("about", Name = HomeControllerRoute.GetAbout)]

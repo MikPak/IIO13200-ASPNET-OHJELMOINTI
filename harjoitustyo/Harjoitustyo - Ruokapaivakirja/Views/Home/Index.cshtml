@@ -24,6 +24,8 @@
         Determiner = OpenGraphDeterminer.Blank,
         SiteName = Application.Name
     };
+
+    @model Harjoitustyo___Ruokapaivakirja.Models.UserAccount
 }
 
 <header class="jumbotron">
@@ -31,6 +33,17 @@
     <p class="lead" style="">Palvelu ruokareseptien tallentamiseen sekä ruokapäiväkirjan pitämiseen.</p>
     <p><a href="https://github.com/ASP-NET-MVC-Boilerplate/Templates" class="btn btn-primary btn-lg">Katso lisää »</a></p>
 </header>
+
+@if (ViewBag.Message != null)
+{
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="success">@ViewBag.Message</div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+}
 
 <div class="row main">
     <div class="col-sm-6">
@@ -41,56 +54,73 @@
             </div>
         </div>
         <div class="main-register main-center">
-            <form class="form-horizontal" method="post" action="#">
-                <div class="form-group">
-                    <label for="name" class="cols-sm-2 control-label">Nimi</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Syötä nimesi" />
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+            {
+            @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Nimi</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Syötä nimesi" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Sähköposti</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Syötä sähköpostisi" />
+
+                    <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Sähköposti</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Syötä sähköpostisi" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="username" class="cols-sm-2 control-label">Käyttäjätunnus</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Syötä käyttäjätunnus" />
+
+                    <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Käyttäjätunnus</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", @placeholder = "Syötä käyttäjätunnuksesi" } })
+                                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="cols-sm-2 control-label">Salasana</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Syötä salasana" />
+
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Salasana</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Syötä salasanasi" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="confirm" class="cols-sm-2 control-label">Salasanan vahvistus</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Syötä salasana" />
+
+                    <div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Salasanan vahvistus</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control", @placeholder = "Vahvista salasanasi" } })
+                                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                            </div>
                         </div>
                     </div>
+                    <br />
+
+                    <div class="form-group">
+                        <input type="submit" value="Rekisteröidy" class="btn btn-primary btn-lg btn-block login-button" />
+                    </div>
                 </div>
-                <div class="form-group ">
-                    <button type="button" class="btn btn-primary btn-lg btn-block login-button">Rekisteröidy</button>
-                </div>
-            </form>
+            }
         </div>
     </div>
     <div class="col-sm-6">
@@ -101,29 +131,41 @@
             </div>
         </div>
         <div class="main-login main-center">
-            <form class="form-horizontal" method="post" action="#">
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {
+            @Html.AntiForgeryToken()
+
                 <div class="form-group">
                     <label for="username" class="cols-sm-2 control-label">Käyttäjätunnus</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Syötä käyttäjätunnus" />
+                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control", @placeholder = "Syötä käyttäjätunnuksesi" } })
+                            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <label for="password" class="cols-sm-2 control-label">Salasana</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Syötä salasana" />
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Syötä salanasi" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </div>
+                <br />
+
                 <div class="form-group ">
-                    <button type="button" class="btn btn-primary btn-lg btn-block login-button">Kirjaudu</button>
+                    <input type="submit" value="Kirjaudu" class="btn btn-primary btn-lg btn-block login-button" />
                 </div>
-            </form>
+            }
         </div>
     </div>
 </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
