@@ -5,6 +5,11 @@
 
 @if (Session["UserId"] != null)
 {
-    <h4>Hei, @Session["Username"].ToString()</h4>
+    <h1>Hei, @Session["Username"].ToString()</h1>
+    <hr class="hrBlack"/>
+    <script src="~/Scripts/calendar.js"></script>
+
+    <div id='calendar'></div>
+
 }
 

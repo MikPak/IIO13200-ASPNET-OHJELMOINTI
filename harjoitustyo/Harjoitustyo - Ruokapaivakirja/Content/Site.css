@@ -48,6 +48,12 @@ body {
   background-color: #FFBABA;
   background-image: url('img/error.png');
 }
+.hrBlack {
+  color: #000;
+  width: 100%;
+  border: 1px solid #000;
+  height: 0px;
+}
 /* 
 
 Landing page 
@@ -120,4 +126,12 @@ input::-webkit-input-placeholder {
 .login-register {
   font-size: 11px;
   text-align: center;
+}
+/* 
+
+LoggedIn Page
+
+*/
+.fc-view-container {
+  background-color: #fff;
 }

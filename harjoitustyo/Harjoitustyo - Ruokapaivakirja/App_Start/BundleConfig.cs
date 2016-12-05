@@ -42,6 +42,10 @@
                 "~/Content/fa",
                 ContentDeliveryNetwork.MaxCdn.FontAwesomeUrl)
                 .Include("~/Content/fontawesome/site.css"));
+
+            bundles.Add(new StyleBundle(
+                "~/Content/fullcalendar")
+                .Include("~/Content/fullcalendar.css"));
         }
 
         /// <summary>
@@ -106,6 +110,22 @@
                 .Include("~/Scripts/Fallback/scripts.js")
                 .Include("~/Scripts/site.js");
             bundles.Add(failoverCoreBundle);
+
+            Bundle datepickerBundle = new ScriptBundle(
+                "~/bundles/datepicker").Include("~/Scripts/bootstrap-datepicker.js");
+            bundles.Add(datepickerBundle);
+
+            Bundle fullcalendarBundle = new ScriptBundle(
+                "~/bundles/fullcalendar").Include("~/Scripts/fullcalendar/fullcalendar.js");
+            bundles.Add(fullcalendarBundle);
+
+            Bundle fullcalendarFin = new ScriptBundle(
+                "~/bundles/fullcalendarfin").Include("~/Scripts/fullcalendar/locale/fi.js");
+            bundles.Add(fullcalendarFin);
+
+            Bundle momentBundle = new ScriptBundle(
+                "~/bundles/moment").Include("~/Scripts/lib/moment.min.js");
+            bundles.Add(momentBundle);
         }
     }
 }
