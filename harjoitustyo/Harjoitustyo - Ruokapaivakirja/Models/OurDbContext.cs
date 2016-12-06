@@ -9,5 +9,6 @@ namespace Harjoitustyo___Ruokapaivakirja.Models
     public class OurDbContext : DbContext
     {
         public DbSet<UserAccount> userAccount { get; set; }
+        public DbSet<CalendarEvent> calendarEvent { get; set; }
     }
 }

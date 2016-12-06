@@ -1,11 +1,13 @@
 ﻿namespace Harjoitustyo___Ruokapaivakirja
 {
+    using System.Data.Entity;
     using System.Web.Helpers;
     using System.Web.Mvc;
     using System.Web.Optimization;
     using System.Web.Routing;
     using Boilerplate.Web.Mvc;
     using Harjoitustyo___Ruokapaivakirja.Services;
+    using Models;
     using NWebsec.Csp;
 
     public class MvcApplication : System.Web.HttpApplication
@@ -14,6 +16,13 @@
         {
             // Ensure that the X-AspNetMvc-Version HTTP header is not 
             //MvcHandler.DisableMvcResponseHeader = true;
+
+            /*
+            Database.SetInitializer<OurDbContext>(new DropCreateDatabaseAlways<OurDbContext>());
+            OurDbContext db = new OurDbContext();
+
+            db.Database.Initialize(true);
+            */
 
             ConfigureViewEngines();
             ConfigureAntiForgeryTokens();

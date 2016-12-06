@@ -29,6 +29,10 @@
 
         private static void AddCss(BundleCollection bundles)
         {
+            bundles.Add(new StyleBundle(
+                "~/Content/jqueryui")
+                .Include("~/Content/jquery-ui-1.10.3.min.css"));
+
             // Bootstrap - Twitter Bootstrap CSS (http://getbootstrap.com/).
             // Site - Your custom site CSS.
             // Note: No CDN support has been added here. Most likely you will want to customize your copy of bootstrap.
@@ -65,9 +69,13 @@
         private static void AddJavaScript(BundleCollection bundles)
         {
             // jQuery - The JavaScript helper API (http://jquery.com/).
-            Bundle jqueryBundle = new ScriptBundle("~/bundles/jquery", ContentDeliveryNetwork.Google.JQueryUrl)
-                .Include("~/Scripts/jquery-{version}.js");
+            Bundle jqueryBundle = new ScriptBundle("~/bundles/jquery")
+                .Include("~/Scripts/jquery-3.1.1.js");
             bundles.Add(jqueryBundle);
+
+            Bundle jqueryUIBundle = new ScriptBundle("~/bundles/jqueryui")
+                .Include("~/Scripts/jquery-ui-1.11.1.js");
+                        bundles.Add(jqueryUIBundle);
 
             // jQuery Validate - Client side JavaScript form validation (http://jqueryvalidation.org/).
             Bundle jqueryValidateBundle = new ScriptBundle(

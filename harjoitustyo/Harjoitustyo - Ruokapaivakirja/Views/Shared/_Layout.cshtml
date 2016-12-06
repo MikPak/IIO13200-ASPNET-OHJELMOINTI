@@ -107,6 +107,7 @@
     @Styles.Render("~/Content/fa")
     @Styles.Render("~/Content/fullcalendar")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/jqueryui")
 
 
     @* Description - Used by search engines. Aim for more than 160 characters. *@
@@ -152,8 +153,9 @@
     @RenderSection("head", required: false)
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/jqueryvalunobtrusive")
+    @Scripts.Render("~/bundles/jqueryUI")
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+    @*@@Scripts.Render("~/bundles/jqueryvalunobtrusive")*@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/moment")
     @Scripts.Render("~/bundles/fullcalendar")

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -37,7 +38,10 @@ namespace Harjoitustyo___Ruokapaivakirja.Controllers
                     using (OurDbContext db = new OurDbContext())
                     {
                         db.userAccount.Add(account);
+                        //db.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
                         db.SaveChanges();
+                        //int id = account.UserID;
+                        //Debug.WriteLine("added user ID: " + id);
                     }
                     ModelState.Clear();
                     TempData["registeredMessage"] = account.Username + " rekisteröity.";

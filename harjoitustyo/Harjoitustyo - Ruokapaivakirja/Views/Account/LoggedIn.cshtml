@@ -7,9 +7,46 @@
 {
     <h1>Hei, @Session["Username"].ToString()</h1>
     <hr class="hrBlack"/>
-    <script src="~/Scripts/calendar.js"></script>
 
     <div id='calendar'></div>
 
+    <script src="~/Scripts/calendar.js"></script>
+
+    <div id="addDialog" style="font: 70% 'Trebuchet MS', sans-serif; margin: 50px;" title="Add Event">
+        <table cellpadding="0" class="style1">
+            <tr>
+                <td class="alignRight">
+                    Nimi:
+                </td>
+                <td class="alignLeft">
+                    <input id="addEventName" type="text" size="50" /><br />
+                </td>
+            </tr>
+            <tr>
+                <td class="alignRight">
+                    Kuvaus:
+                </td>
+                <td class="alignLeft">
+                    <textarea id="addEventDesc" cols="30" rows="3"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="alignRight">
+                    Alku:
+                </td>
+                <td class="alignLeft">
+                    <span id="addEventStartDate"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="alignRight">
+                    Loppu:
+                </td>
+                <td class="alignLeft">
+                    <span id="addEventEndDate"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
 }
 
