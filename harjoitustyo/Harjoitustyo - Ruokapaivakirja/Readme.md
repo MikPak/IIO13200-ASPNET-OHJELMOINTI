@@ -1,4 +1,4 @@
-## FullCalendar jQuery plugin implemented in ASP.NET MVC 5 & Entity Framework 6
+## FullCalendar jQuery plugin with ASP.NET MVC 5 & Entity Framework 6
 
 blah blah blah
 
