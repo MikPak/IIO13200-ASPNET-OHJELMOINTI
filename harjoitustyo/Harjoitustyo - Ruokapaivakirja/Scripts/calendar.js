@@ -7,7 +7,7 @@ var globalAllDay;
 
 function addSuccess(addResult) {
     // if addresult is -1, means event was not added
-    alert("added key: " + addResult);
+    //alert("added key: " + addResult);
 
     if (addResult != -1) {
         $('#calendar').fullCalendar('renderEvent',

@@ -65,21 +65,28 @@ namespace Harjoitustyo___Ruokapaivakirja.Controllers
         [HttpPost]
         public ActionResult Login(UserAccount user) 
         {
-            using(OurDbContext db = new OurDbContext()) 
+            if (Session["UserID"] == null)
             {
-                var usr = db.userAccount.Where(u => u.Username == user.Username && u.Password == user.Password).FirstOrDefault();
-                if(usr != null)
+                using (OurDbContext db = new OurDbContext())
                 {
-                    Session["UserID"] = usr.UserID.ToString();
-                    Session["Username"] = usr.Username.ToString();
-                    return RedirectToAction("LoggedIn");
+                    var usr = db.userAccount.Where(u => u.Username == user.Username && u.Password == user.Password).FirstOrDefault();
+                    if (usr != null)
+                    {
+                        Session["UserID"] = usr.UserID.ToString();
+                        Session["Username"] = usr.Username.ToString();
+                        return RedirectToAction("LoggedIn");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Käyttäjätunnus tai salasana virheellinen.");
+                    }
                 }
-                else
-                {
-                    ModelState.AddModelError("", "Käyttäjätunnus tai salasana virheellinen.");
-                }
+                return View();
             }
-            return View();
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public ActionResult LoggedIn()

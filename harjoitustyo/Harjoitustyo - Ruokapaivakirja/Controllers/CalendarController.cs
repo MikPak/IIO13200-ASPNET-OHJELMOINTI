@@ -21,54 +21,67 @@ namespace Harjoitustyo___Ruokapaivakirja.Controllers
         [HttpPost]
         public int addEvent(ImproperCalendarEvent improperEvent)
         {
-            // FullCalendar 2.x
-            CalendarEvent cevent = new CalendarEvent()
+            if (Session["UserID"] != null)
             {
-                title = improperEvent.title,
-                description = improperEvent.description,
-                start = Convert.ToDateTime(improperEvent.start).ToUniversalTime(),
-                end = Convert.ToDateTime(improperEvent.end).ToUniversalTime(),
-                allDay = improperEvent.allDay
-            };
-
-            if (CheckAlphaNumeric(cevent.title) && CheckAlphaNumeric(cevent.description))
-            {
-                using (OurDbContext db = new OurDbContext())
+                // FullCalendar 2.x
+                CalendarEvent cevent = new CalendarEvent()
                 {
-                    db.calendarEvent.Add(cevent);
-                    //db.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
-                    db.SaveChanges();
-                    int key = cevent.id;
-                    Debug.WriteLine("Lisätty event: " + key);
+                    title = improperEvent.title,
+                    description = improperEvent.description,
+                    start = Convert.ToDateTime(improperEvent.start).ToUniversalTime(),
+                    end = Convert.ToDateTime(improperEvent.end).ToUniversalTime(),
+                    allDay = improperEvent.allDay
+                };
 
-                    List<int> idList = (List<int>)System.Web.HttpContext.Current.Session["idList"];
-
-                    if (idList != null)
+                if (CheckAlphaNumeric(cevent.title) && CheckAlphaNumeric(cevent.description))
+                {
+                    using (OurDbContext db = new OurDbContext())
                     {
-                        idList.Add(key);
-                    }
+                        db.calendarEvent.Add(cevent);
+                        //db.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+                        db.SaveChanges();
+                        int key = cevent.id;
+                        Debug.WriteLine("Lisätty event: " + key);
 
-                    return key; //return the primary key of the added cevent object
+                        List<int> idList = (List<int>)System.Web.HttpContext.Current.Session["idList"];
+
+                        if (idList != null)
+                        {
+                            idList.Add(key);
+                        }
+
+                        return key; //return the primary key of the added cevent object
+                    }
                 }
+                return -1; //return a negative number just to signify nothing has been added
+            } else {
+                RedirectToAction("Index", "Home");
+                return -1;
             }
-            return -1; //return a negative number just to signify nothing has been added
         }
 
         [HttpPost]
         public ActionResult getEvents(long start, long end)
         {
-            Debug.WriteLine("called getEvents");
-            var epoch = new DateTime(1970, 1, 1);
-            var startDate = epoch.AddMilliseconds(start);
-            var endDate = epoch.AddMilliseconds(end);
-
-            using (OurDbContext db = new OurDbContext())
+            if (Session["UserID"] != null)
             {
-                var data = db.calendarEvent
-                .Where(i => startDate <= i.start && i.end <= endDate).Take(20).ToList();
+                //Debug.WriteLine("called getEvents");
+                var epoch = new DateTime(1970, 1, 1);
+                var startDate = epoch.AddMilliseconds(start);
+                var endDate = epoch.AddMilliseconds(end);
 
-                db.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
-                return Json(data);
+                using (OurDbContext db = new OurDbContext())
+                {
+                    var data = db.calendarEvent
+                    .Where(i => startDate <= i.start && i.end <= endDate).Take(20).ToList();
+
+                    db.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+                    return Json(data);
+                }
+            }
+            else
+            {
+               return RedirectToAction("Index", "Home");
             }
         }
 
